@@ -47,12 +47,12 @@ export default function Home() {
 
         <section className="flex flex-col max-w-3xl w-[90%] my-8 mx-auto text-center text-yellow-50 text-2xl ">
           <h2 className='text-4xl font-bold py-2 px-4 my-8 mx-auto'>Why NextLevel Food?</h2>
-          <p>
+          <p className='my-6'>
             NextLevel Food is a platform for foodies to share their favorite
             recipes with the world. It&apos;s a place to discover new dishes,
             and to connect with other food lovers.
           </p>
-          <p>
+          <p className='my-6'>
             NextLevel Food is a place to discover new dishes, and to connect
             with other food lovers.
           </p>
