@@ -1,3 +1,4 @@
+import MealsGrid from '@/components/MealsGrid';
 import Link from 'next/link';
 
 const MealsPage = () => {
@@ -23,8 +24,9 @@ const MealsPage = () => {
           <Link className={`inline-block mt-4 py-2 px-4 rounded-lg text-white font-bold bg-gradient-to-r from-orange-700 to-amber-600`} href="/meals/share">Share Your Favorite Recipe</Link>
         </p>
       </header>
-      {/* classname main */}
-      <main></main>
+      <main className={`text-center my-20 mx-auto`}>
+        <MealsGrid meals={[]} />
+      </main>
     </>
   );
 };
