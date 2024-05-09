@@ -3,9 +3,7 @@ import Image from 'next/image';
 
 import logoImg from '@/assets/logo.png';
 import MainHeaderBackground from './MainHeaderBackground';
-
-const listClass =
-  'text-[#ddd6cb] font-bold py-4 px-8 hover:bg-clip-text active:bg-clip-text hover:bg-gradient-to-r active:bg-gradient-to-r from-[#ff8a05] to-[#f9b331]';
+import NavLink from './NavLink';
 
 const imageLinkClass =
   'flex items-center justify-center gap-8 no-underline text-gray-300 font-bold font-montserrat tracking-wider uppercase text-lg ';
@@ -27,16 +25,8 @@ const MainHeader = () => {
 
       <nav>
         <ul className="list-none m-0 p-0 flex gap-6 text-lg">
-          <li>
-            <Link href="/meals" className={listClass}>
-              Browse Meals
-            </Link>
-          </li>
-          <li>
-            <Link href="/community" className={listClass}>
-              Foodies Community
-            </Link>
-          </li>
+          <NavLink href='/meals'>Browse Meals</NavLink>
+          <NavLink href='/community'>Foodies Community</NavLink>
         </ul>
       </nav>
     </header>
