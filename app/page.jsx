@@ -1,7 +1,19 @@
 import ImageSlideShow from '@/components/ImageSlideShow';
+import db from '@/database';
 import Link from 'next/link';
 
 export default function Home() {
+  try {
+    db.connect();
+    console.log('DB Connected')
+    const fetchDataMeals = async () => {
+      const response = await db.query("SELECT * FROM meals ORDER BY id")
+      console.log(response.rows)
+    }
+    fetchDataMeals()
+  } catch (error) {
+    console.log('Failed to connect to DB: ', error)
+  } 
   return (
     <>
       <header className="flex gap-12 my-12 mx-auto w-[90%] max-w-7xl">
