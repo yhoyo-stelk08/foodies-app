@@ -8,7 +8,7 @@ const MealsPage = () => {
     <>
       {/* header section */}
       <header className={`${headerClass}`}>
-        <h1 className="font-Montserrat">
+        <h1 className="font-Montserrat text-4xl font-bold my-10">
           Delicious meals, created
           {/* highlight */}
           <span className={`${highlightClass}`}>
