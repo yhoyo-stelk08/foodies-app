@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import logoImg from '@/assets/logo.png';
+import MainHeaderBackground from './MainHeaderBackground';
 
 const listClass =
   'text-[#ddd6cb] font-bold py-4 px-8 hover:bg-clip-text active:bg-clip-text hover:bg-gradient-to-r active:bg-gradient-to-r from-[#ff8a05] to-[#f9b331]';
@@ -11,6 +12,8 @@ const imageLinkClass =
 
 const MainHeader = () => {
   return (
+    <>
+    <MainHeaderBackground />
     <header className="flex justify-between items-center py-8 px-4 md:px-[10%]">
       <Link className={imageLinkClass} href="/">
         <Image
@@ -37,6 +40,7 @@ const MainHeader = () => {
         </ul>
       </nav>
     </header>
+    </>
   );
 };
 
