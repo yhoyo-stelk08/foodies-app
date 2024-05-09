@@ -1,9 +1,11 @@
 import MealsGrid from '@/components/MealsGrid';
 import Link from 'next/link';
+import { fetchAllMeals } from '@/db_query/meals';
 
-const MealsPage = () => {
+const MealsPage = async () => {
   const headerClass = `my-12 mx-auto mb-20 w-[90%] max-w-7xl gap-12 text-2xl text-orange-50`;
   const highlightClass = `bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-orange-400 `
+  const meals =  await fetchAllMeals()
   return (
     <>
       {/* header section */}
@@ -25,7 +27,7 @@ const MealsPage = () => {
         </p>
       </header>
       <main className={`text-center my-20 mx-auto`}>
-        <MealsGrid meals={[]} />
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
