@@ -8,11 +8,11 @@ const db = new Pool({
     port: process.env.PG_PORT,
 });
 
-// try {
-//     db.connect()
-//     console.log('Database connected')
-// } catch (error) {
-//     console.log('Failed to connect to database: ',error)
-// }
+try {
+    db.connect()
+    console.log('Database connected')
+} catch (error) {
+    console.log('Failed to connect to database: ',error)
+}
 
 export default db;
