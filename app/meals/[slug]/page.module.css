@@ -3,7 +3,7 @@
 }
 
 .image {
-  @apply flex py-8 px-4 gap-12 m-auto max-w-7xl;
+  @apply relative w-[30rem] h-80;
 }
 
 .header img {
@@ -19,7 +19,7 @@
 }
 
 .creator {
-  @apply text-2xl italic text-red-100;
+  @apply my-8 text-2xl italic text-red-100;
 }
 
 .creator a {
