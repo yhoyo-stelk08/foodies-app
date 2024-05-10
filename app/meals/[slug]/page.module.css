@@ -1,0 +1,44 @@
+.header {
+  @apply flex py-8 px-4 gap-12 m-auto max-w-7xl;
+}
+
+.image {
+  @apply flex py-8 px-4 gap-12 m-auto max-w-7xl;
+}
+
+.header img {
+  @apply object-cover rounded-lg shadow animate-fade-slide-in-from-left duration-1000 ease-out;
+}
+
+.headerText {
+  @apply p-0 pt-2 px-4 text-orange-100 max-w-2xl animate-fade-slide-in-from-left duration-1000 ease-out;
+}
+
+.headerText h1 {
+  @apply m-0 text-5xl uppercase font-Montserrat shadow-md;
+}
+
+.creator {
+  @apply text-2xl italic text-red-100;
+}
+
+.creator a {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400;
+}
+
+.creator a:hover,
+.creator a:active {
+  @apply shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400;
+}
+
+.summary {
+  @apply text-2xl;
+}
+
+.instructions {
+  @apply max-w-5xl my-8 mx-auto p-8 rounded-lg shadow-sm text-xl leading-6 bg-[#6e6464] text-[#13120f] animate-fade-slide-in-from-bottom;
+}
+
+.loading {
+  @apply text-5xl text-center text-orange-50 font-bold animate-flash;
+}
