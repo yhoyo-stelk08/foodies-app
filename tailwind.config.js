@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Montserrat: ["Montserrat", "sans-serif"]
+        Montserrat: ["Montserrat", "sans-serif"],
+        Quicksand: ['Quicksand', "sans-serif"]
       }
     },
   },
