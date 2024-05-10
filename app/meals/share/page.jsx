@@ -1,6 +1,7 @@
-import ImagePicker from '@/components/ImagePicker';
 import classes from './page.module.css';
 import { shareMeal } from '@/lib/actions';
+import ImagePicker from '@/components/ImagePicker';
+import MealsFormSubmit from '@/components/MealsFormSubmit';
 
 const MealsSharePage = () => {
   return (
@@ -42,7 +43,7 @@ const MealsSharePage = () => {
           </p>
           <ImagePicker label='Your image' name='image' />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <MealsFormSubmit />
           </p>
         </form>
       </main>
