@@ -1,11 +1,13 @@
-import MealsGrid from '@/components/MealsGrid';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import { fetchAllMeals } from '@/db_query/meals';
-import { Suspense } from 'react';
+
+import MealsGrid from '@/components/MealsGrid';
+import Spinner from '@/components/Spinner';
 
 const Meals = async () => {
   const meals = await fetchAllMeals();
-  <MealsGrid meals={meals} />;
+  return <MealsGrid meals={meals} />;
 };
 
 const MealsPage = () => {
@@ -35,8 +37,8 @@ const MealsPage = () => {
         </p>
       </header>
       <main className={`text-center my-20 mx-auto`}>
-        <Suspense fallback>
-        <Meals />
+        <Suspense fallback={<Spinner />}>
+          <Meals />
         </Suspense>
       </main>
     </>
