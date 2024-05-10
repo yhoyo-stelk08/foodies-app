@@ -1,45 +1,28 @@
 .controls {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .picker .input {
-    display: none;
-  }
-  
-  .picker .button {
-    border: 0;
-    padding: 0.5rem 1.5rem;
-    background: #a4abb9;
-    border-radius: 2px;
-    cursor: pointer;
-    font: inherit;
-  }
-  
-  .picker .button:hover,
-  .picker .button:focus {
-    background: #b3b9c6;
-  }
-  
-  .preview {
-    width: 10rem;
-    height: 10rem;
-    border: 2px solid #a4abb9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #a4abb9;
-    position: relative;
-  }
-  
-  .preview p {
-    margin: 0;
-    padding: 1rem;
-  }
-  
-  .preview img {
-    object-fit: cover;
-  }
+  @apply flex items-start gap-6 mb-4;
+}
+
+.picker .input {
+  @apply hidden;
+}
+
+.picker .button {
+  @apply border-0 py-2 px-6 bg-stone-400 rounded-sm cursor-pointer;
+}
+
+.picker .button:hover,
+.picker .button:focus {
+    @apply bg-stone-400;
+}
+
+.preview {
+    @apply relative flex justify-center items-center w-40 h-40 border-2 border-solid border-stone-400 text-center text-stone-400;
+}
+
+.preview p {
+    @apply m-0 p-4;
+}
+
+.preview img {
+    @apply object-cover;
+}
