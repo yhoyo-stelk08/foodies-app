@@ -45,6 +45,7 @@ const ImagePicker = ({ label, name }) => {
           accept="image/png, image/jpeg"
           name={name}
           ref={imageInput}
+          required
         />
         <button
           onClick={handlePickImg}
