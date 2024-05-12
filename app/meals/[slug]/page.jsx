@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import classes from '@/app/meals/[slug]/page.module.css';
 import { fetchMeal } from '@/db_query/meals';
@@ -10,7 +11,7 @@ const getMeal = async (slug) => {
 const MealPage = async ({ params }) => {
   const meal = await getMeal(params.slug);
 
-  if(!meal) {
+  if (!meal) {
     notFound();
   }
 
@@ -18,7 +19,9 @@ const MealPage = async ({ params }) => {
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image src={meal.image} alt={meal.title} fill />
+          <Link href={`/meals/${params.slug}/images`}>
+            <Image src={meal.image} alt={meal.title} fill />
+          </Link>
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>
@@ -31,7 +34,6 @@ const MealPage = async ({ params }) => {
       <main>
         <p
           className={`${classes.instructions} whitespace-break-spaces text-left`}
-          
         >
           {meal.instruction}
         </p>
