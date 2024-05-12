@@ -22,7 +22,7 @@ const ImagesInterceptedPage = async ({ params }) => {
       >
       <dialog className={classes.modal} open>
         <Image
-          className={classes.modal-img}
+          className={classes.imgModal}
           src={meal.image}
           alt={meal.title}
           width={400}
