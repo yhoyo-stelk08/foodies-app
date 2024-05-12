@@ -1,6 +1,9 @@
-const MealsDetailLayout = ({children}) => {
+const MealsDetailLayout = ({ children, modal }) => {
   return (
-    <>{children}</>
-  )
-}
-export default MealsDetailLayout
+    <>
+      {modal}
+      {children}
+    </>
+  );
+};
+export default MealsDetailLayout;

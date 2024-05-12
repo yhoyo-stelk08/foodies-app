@@ -15,11 +15,11 @@ const ImagesInterceptedPage = async ({ params }) => {
   }
 
   return (
-    <div>
+    <div >
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-slate-900 bg-opacity-85 flex justify-center items-center`}
-      />
-      <dialog className={`bg-slate-300 p-8 border-none rounded w-full max-w-3xl shadow-md`} open>
+        className={`fixed top-0 left-0 w-full h-full bg-slate-900 bg-opacity-85 flex justify-center items-center z-50`}
+      >
+      <dialog className={`bg-slate-900 bg-opacity-85 p-8 border-none rounded w-full max-w-3xl shadow-md`} open>
         <Image
           className={`my-12 mx-auto rounded-lg h-auto w-auto`}
           src={meal.image}
@@ -29,6 +29,7 @@ const ImagesInterceptedPage = async ({ params }) => {
           priority
         />
       </dialog>
+      </div>
     </div>
   );
 };
