@@ -1,7 +1,6 @@
 import { fetchMeal } from '@/db_query/meals';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import classes from '@/app/meals/[slug]/@modal/(.)images/page.module.css'
+import ImageModal from '@/components/ImageModal';
 
 const getMeal = async (slug) => {
   return await fetchMeal(slug);
@@ -17,20 +16,7 @@ const ImagesInterceptedPage = async ({ params }) => {
 
   return (
     <div >
-      <div
-        className={classes.backdrop}
-      >
-      <dialog className={classes.modal} open>
-        <Image
-          className={classes.imgModal}
-          src={meal.image}
-          alt={meal.title}
-          width={400}
-          height={200}
-          priority
-        />
-      </dialog>
-      </div>
+      <ImageModal imgSrc={meal.image} imgTitle={meal.title} />
     </div>
   );
 };
